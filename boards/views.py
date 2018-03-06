@@ -11,6 +11,13 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import UpdateView, ListView
 from django.utils import timezone
 
+def test(request):
+    baz = [1, 2, 3, 4, 5]
+    return render(request, 'test.html', {'baz' : baz})
+
+def test_1(request):
+    return render(request, 'test_1.html')
+
 class BoardListView(ListView):
     model = Board
     context_object_name = 'boards'

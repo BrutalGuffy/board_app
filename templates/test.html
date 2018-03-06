@@ -1,0 +1,237 @@
+{% load form_tags %}<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" {% static 'css/reset.css' %}>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src= {% static "js/jquery-3.3.1.min.js" %}></script>
+    <script src= {% static "js/popper.min.js" %}></script>
+    <script src= {% static "js/bootstrap.min.js" %}></script>
+    <title>Testing ground</title>
+</head>
+<body>
+
+<div class="container-fluid">
+<header>
+  <p>
+      <div class="row">
+        <div class="col-xl-5">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'img/babe.jpg' %}" alt="Tibitaco logo">
+        </a>
+        </div>
+      </div>
+      <br>
+    <em>A cool website</em>
+  </p>
+  <ul>
+    <li>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+</header>
+
+<div id="header">
+    <a href="#footer">
+        GET DOWN!
+    </a>
+</div>
+hello
+<div style="color: #6f42c1">
+    kek
+    <a href="#" style="color: gold">
+        <h1 style="color: indigo">
+            THIS IS AMAZING!
+        </h1>
+    </a>
+    <a href="{% url 'test_1' %}">
+        <img src="https://www.splcenter.org/sites/default/files/kek.jpg"  alt="kek" align="middle" >
+    </a>
+</div>
+<p>Have you seen this <a href="https://www.youtube.com">amazing video</a> on YouTube?</p>
+
+<form action="#" method="post" novalidate>
+
+<input type="text" placeholder="DIS NUTS" style="background: pink">
+    <br>
+    <label style="color: #6f42c1"> u'r u ok? </label>
+<input type="checkbox">
+    <br>
+<label>
+<input type="checkbox" checked> Click here!
+</label>
+    <br>
+<label>
+<input type="radio" name="foozy"> С правой
+</label>
+    <br>
+<input type="radio" name="foozy"> С левой
+    <br>
+    <label for="first_name">First name</label>
+    <input id="first_name" type="text">
+    <br>
+    <label for="roflan">roflan</label>
+    <input id="roflan" type="checkbox">
+    <br>
+    <button class="button btn-dark">OBEY!</button>
+</form>
+<br>
+<label>Who is you god?</label>
+<label>
+  <input type="radio" name="status">
+  Allah
+</label>
+<label>
+  <input type="radio" name="status">
+  Jesus
+</label>
+<label>
+  <input type="radio" name="status">
+  Satan
+</label>
+<label>
+  <input type="radio" name="status">
+  Jah
+</label>
+
+<select multiple style="background: #1c7430; color: white">
+  <option>January</option>
+  <option>February</option>
+  <option>March</option>
+  <option>April</option>
+  <option>May</option>
+  <option>June</option>
+  <option>July</option>
+  <option>August</option>
+  <option>September</option>
+  <option>October</option>
+  <option>November</option>
+  <option>December</option>
+</select>
+
+<table class="table table-dark" border="2" style="border-width: 5px">
+      <thead>
+        <tr>
+          <th>Board</th>
+          <th>Posts</th>
+          <th colspan="2">Topics</th>
+          <th>Last Post</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for foo in baz %}
+          <tr>
+            <td style="color: red"> <a href="#" style="color: red">kek</a>
+                lol
+              </td>
+            <td style="color: green">
+                {{ foo }}
+            </td>
+            <td style="font-size: 200%">
+                {{ 5|sub:foo}}
+            </td>
+            <td>
+                hello <br> it's me
+            </td>
+            <td>
+                TESTIN
+            </td>
+      {%  endfor %}
+      </tbody>
+    </table>
+<ol>
+    <li>
+        hello
+    </li>
+    <li>
+        <abbr>
+            KEKULEK.inc
+        </abbr>
+    </li>
+</ol>
+<ul>
+<li>
+    kek <br>
+    lol
+    rtr
+</li>
+<li>
+    <a href="https://web.telegram.org/#/im?p=@cat6oy"> see Manix dialog!</a> it's free!
+</li>
+</ul>
+<p>
+  Sir <strong>Alex Ferguson</strong> once said about Filipo Inzaghi:<q>"That lad must have been born offside."</q>.
+</p>
+<br>
+<div id="footer">
+    <a href="#header">
+        armor UP!
+    </a>
+</div>
+
+<table border="2">
+  <tr>
+    <th colspan="2">Michael Jackson Singles</th>
+  </tr>
+  <tr>
+    <th rowspan="3">1979</th>
+    <td>Don't Stop 'Til You Get Enough</td>
+  </tr>
+  <tr>
+    <td>Rock with You</td>
+  </tr>
+  <tr>
+    <td>Off the Wall</td>
+  </tr>
+</table>
+
+<footer>
+  <p>MarkSheet.io | Copyright 2015</p>
+  <ul>
+    <li>
+      <a href="home.html">Home</a>
+    </li>
+    <li>
+      <a href="#">About</a>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a href="#">Privacy Policy</a>
+    </li>
+    <li>
+      <a href="#">Terms of use</a>
+    </li>
+  </ul>
+</footer>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logo</th>
+      <th colspan="2">Tagline</th>
+    </tr>
+  </thead>
+  <tfoot style="background: #0055aa">
+    <tr>
+      <th colspan="3">Copyright 2015</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Left menu</td>
+      <td>Main content</td>
+      <td>Right sidebar</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</body>
+</html>
